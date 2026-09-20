@@ -4,11 +4,11 @@
 
 ## 命令行安装
 
-仓库当前为私有。先确保你的 GitHub 账号拥有仓库权限，并已配置 SSH，然后执行：
+macOS / Linux：
 
 ```bash
 mkdir -p "$HOME/.agents/skills" \
-  && git clone --depth 1 git@github.com:Clearlovesixteen/llm-cost-optimizer.git \
+  && git clone --depth 1 https://github.com/Clearlovesixteen/llm-cost-optimizer.git \
     "$HOME/.agents/skills/llm-cost-optimizer"
 ```
 
@@ -16,7 +16,7 @@ Windows PowerShell：
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME\.agents\skills" | Out-Null
-git clone --depth 1 git@github.com:Clearlovesixteen/llm-cost-optimizer.git "$HOME\.agents\skills\llm-cost-optimizer"
+git clone --depth 1 https://github.com/Clearlovesixteen/llm-cost-optimizer.git "$HOME\.agents\skills\llm-cost-optimizer"
 ```
 
 更新到最新版：
@@ -50,9 +50,3 @@ $llm-cost-optimizer 为这套 LLM 工作流设计成本监控口径和优化优�
 ## 默认边界
 
 该 Skill 默认只做审计和优化建议，不会自动修改提示词、代码或配置。需要实际改造时，请在请求中明确说明允许修改的范围。
-
-## 真实案例
-
-仓库内附一份真实审计案例：在“读取一篇微信公众号文章并制作团队 Skill”的任务中，先后出现本地接口不可达、依赖缺失、网页直连失败，以及浏览器超时导致重复打开 4 个相同页面。最终通过复用已经打开的页面并只提取正文完成任务。
-
-案例刻意不虚构 Token 或金额，而是依据可复核的调用记录指出：主要浪费来自失败空转、重复页面和工具路径选择，并给出可执行的路由、复用、熔断与埋点方案。详见 [`references/real-case.md`](references/real-case.md)。

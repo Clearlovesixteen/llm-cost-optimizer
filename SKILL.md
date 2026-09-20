@@ -23,7 +23,7 @@ description: 审计并优化 LLM API、Agent、MCP、RAG 与 AI 编程工作流�
 4. **提出改造**：说明每项建议影响 Token、费用还是时延；列出证据、预期方向、风险、依赖、置信度和验证方法，避免重复计算同一份收益。
 5. **排序与停止**：按预期价值、改造成本、质量风险和证据置信度排序。证据足够且交付物完整后停止，不重复给出同义建议。
 
-对实际系统做全面审计、设计埋点或比较多个方案时，读取 [references/audit-playbook.md](references/audit-playbook.md)。需要参考一份有真实证据、但缺少精确 Token 计量的审计示例时，读取 [references/real-case.md](references/real-case.md)。概念性短问答无需加载整份手册。
+对实际系统做全面审计、设计埋点或比较多个方案时，读取 [references/audit-playbook.md](references/audit-playbook.md)。概念性短问答无需加载整份手册。
 
 ## 交付格式
 
