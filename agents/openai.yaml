@@ -1,0 +1,4 @@
+interface:
+  display_name: "LLM Cost Optimizer"
+  short_description: "审计并优化 LLM、Agent 工作流的 Token 与端到端成本"
+  default_prompt: "使用 $llm-cost-optimizer 审计这套 LLM 或 Agent 工作流，并给出有证据、可排序的降本方案。"
